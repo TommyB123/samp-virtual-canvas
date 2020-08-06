@@ -27,7 +27,7 @@ stock CreateVirtualCanvas(Float:minX, Float:maxX, Float:minY, Float:maxY, resX, 
 }
 
 // GetVirtualCanvasPos scales the given integer position for the given canvas, returns 0 on success
-stock GetVirtualCanvasPos(canvas[VirtualCanvas], posX, posY, &Float:resultX, &Float:resultY) {
+stock GetVirtualCanvasPos(const canvas[VirtualCanvas], posX, posY, &Float:resultX, &Float:resultY) {
 	if(posX < 0 || posY < 0 || posX > canvas[canvasResX] || posY > canvas[canvasResY]) {
 		return 1;
 	}
